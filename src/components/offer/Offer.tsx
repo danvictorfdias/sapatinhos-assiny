@@ -71,7 +71,7 @@ function Offer() {
           </div>
 
           <div className="mb-6">
-            <div style={{ fontSize: '160px', fontWeight: '900', color: '#2E7D32', letterSpacing: '-0.02em', lineHeight: '1', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+            <div className="text-[80px] md:text-[160px] font-black text-verde-cta tracking-tighter leading-none font-sans">
               R$27
             </div>
           </div>

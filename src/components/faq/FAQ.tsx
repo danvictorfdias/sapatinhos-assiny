@@ -56,16 +56,14 @@ export default function FAQ() {
                   {faq.question}
                 </span>
                 <Plus
-                  className={`w-6 h-6 text-rosa-primary flex-shrink-0 transition-transform duration-300 ${
-                    openIndex === index ? 'rotate-45' : ''
-                  }`}
+                  className={`w-6 h-6 text-azul-primary flex-shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-45' : ''
+                    }`}
                 />
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 bg-white ${
-                  openIndex === index ? 'max-h-[500px]' : 'max-h-0'
-                }`}
+                className={`overflow-hidden transition-all duration-300 bg-white ${openIndex === index ? 'max-h-[500px]' : 'max-h-0'
+                  }`}
               >
                 <div className="px-5 py-5 text-cinza-medium leading-relaxed">
                   {faq.answer}

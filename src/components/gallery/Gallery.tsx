@@ -14,12 +14,12 @@ const recipes = [
 
 function Gallery() {
   return (
-    <section className="py-20 px-5 bg-gradient-to-b from-[#FCE4EC] to-bege-light">
+    <section className="py-20 px-5 bg-gradient-to-b from-[#E3F2FD] to-bege-light">
       <div className="container mx-auto max-w-6xl">
         <h2
           className="text-[32px] font-bold text-center mb-12"
           style={{
-            background: 'linear-gradient(135deg, #E91E8C, #D81B7E)',
+            background: 'linear-gradient(135deg, #2196F3, #1976D2)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -32,7 +32,7 @@ function Gallery() {
           {recipes.map((recipe, idx) => (
             <div
               key={idx}
-              className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl hover:shadow-rosa-primary/25 transition-all duration-300 hover:-translate-y-2"
+              className="bg-white p-5 rounded-2xl shadow-md hover:shadow-xl hover:shadow-azul-primary/25 transition-all duration-300 hover:-translate-y-2"
             >
               <img
                 src={recipe.image}
@@ -40,15 +40,7 @@ function Gallery() {
                 loading="lazy"
                 className="w-full aspect-square object-cover rounded-xl mb-3"
               />
-              <p className="text-base text-cinza-dark text-center">
-                {recipe.name}
-                {recipe.highlight && (
-                  <>
-                    <br />
-                    <span className="font-semibold text-rosa-primary">{recipe.highlight}</span>
-                  </>
-                )}
-              </p>
+
             </div>
           ))}
         </div>

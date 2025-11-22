@@ -7,9 +7,9 @@ export default {
         sans: ['Poppins', 'Arial', 'sans-serif'],
       },
       colors: {
-        'rosa-primary': '#E91E8C',
-        'rosa-gradient-start': '#E91E8C',
-        'rosa-gradient-end': '#D81B7E',
+        'azul-primary': '#2196F3',
+        'azul-gradient-start': '#2196F3',
+        'azul-gradient-end': '#1976D2',
         'bege-light': '#FAF7F4',
         'verde-cta': '#4CAF50',
         'verde-hover': '#45a049',

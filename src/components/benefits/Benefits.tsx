@@ -49,7 +49,7 @@ function Benefits() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-bege-light to-[#F5F0E8] p-10 rounded-2xl border-2 border-transparent transition-all duration-300 hover:-translate-y-2 hover:border-rosa-primary hover:shadow-xl hover:shadow-rosa-primary/20"
+              className="bg-gradient-to-br from-bege-light to-[#F5F0E8] p-10 rounded-2xl border-2 border-transparent transition-all duration-300 hover:-translate-y-2 hover:border-azul-primary hover:shadow-xl hover:shadow-azul-primary/20"
             >
               <div className="text-5xl mb-4">{benefit.emoji}</div>
               <h3 className="text-xl font-semibold text-cinza-dark mb-3">

@@ -3,7 +3,7 @@ export default function Guarantee() {
     <section className="py-20 px-5 bg-bege-light">
       <div className="container mx-auto max-w-3xl text-center">
         <h2 className="text-[28px] font-bold text-cinza-dark mb-8">
-          Garantia de 100% de Satisfação ou <span className="text-rosa-primary">Reembolso Total!</span>
+          Garantia de 100% de Satisfação ou <span className="text-azul-primary">Reembolso Total!</span>
         </h2>
 
         <div className="mb-8">

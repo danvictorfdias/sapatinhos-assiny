@@ -62,7 +62,7 @@ export default function UrgencyModal() {
 
         <h2 className="text-[28px] font-bold text-cinza-dark mb-4 text-center">
           Oferta Exclusiva por{' '}
-          <span className="text-rosa-primary">Tempo Limitado!</span>
+          <span className="text-azul-primary">Tempo Limitado!</span>
         </h2>
 
         <p className="text-base text-cinza-medium mb-4 text-center leading-relaxed">

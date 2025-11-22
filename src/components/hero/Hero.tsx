@@ -10,7 +10,7 @@ function Hero() {
   };
 
   return (
-    <section className="relative bg-gradient-to-br from-rosa-gradient-start to-rosa-gradient-end py-20 px-5">
+    <section className="relative bg-gradient-to-br from-azul-gradient-start to-azul-gradient-end py-20 px-5">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-white">
@@ -36,7 +36,7 @@ function Hero() {
             <a
               href="#preco"
               onClick={scrollToPrice}
-              className="inline-block bg-verde-cta hover:bg-verde-hover text-white px-10 py-4 rounded-lg text-lg font-bold shadow-lg transition-all duration-300 hover:-translate-y-0.5 animate-pulse-shadow"
+              className="inline-block bg-verde-cta hover:bg-verde-hover text-white px-6 py-3 md:px-10 md:py-4 rounded-lg text-sm md:text-lg font-bold shadow-lg transition-all duration-300 hover:-translate-y-0.5 animate-pulse-shadow w-full md:w-auto text-center"
             >
               QUERO MEUS SAPATINHOS AMIGURUMI AGORA!
             </a>

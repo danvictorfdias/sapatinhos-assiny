@@ -12,7 +12,7 @@ export default function FinalCTA() {
   };
 
   return (
-    <section className="py-16 px-5 bg-gradient-to-br from-rosa-gradient-start to-rosa-gradient-end">
+    <section className="py-16 px-5 bg-gradient-to-br from-azul-gradient-start to-azul-gradient-end">
       <div className="container mx-auto max-w-3xl text-center">
         <h2 className="text-[32px] font-bold text-white mb-6">
           Garanta agora sua apostila com +100 receitas por apenas R$27!
