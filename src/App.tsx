@@ -12,6 +12,8 @@ import FinalCTA from './components/finalcta/FinalCTA';
 import Footer from './components/footer/Footer';
 import PurchaseNotification from './components/purchasenotification/PurchaseNotification';
 
+import TopBanner from './components/topbanner/TopBanner';
+
 // Função que remove elementos flutuantes com estilos específicos
 const removeFloating = () => {
   document.querySelectorAll('[style^="position: fixed"][style*="bottom: 1rem"][style*="z-index: 2147483647"]').forEach(el => el.remove());
@@ -28,6 +30,7 @@ observer.observe(document.body, { childList: true, subtree: true });
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <TopBanner />
       <Hero />
       <LoveCrochet />
       <Benefits />
