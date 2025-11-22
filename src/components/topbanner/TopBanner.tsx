@@ -8,8 +8,8 @@ function TopBanner() {
     });
 
     return (
-        <div className="bg-vermelho-urgencia text-white text-center py-2 px-4 text-sm md:text-base font-medium">
-            Desconto de Black Friday, só <span className="text-amarelo-destaque font-bold">HOJE</span> - <span className="text-amarelo-destaque font-bold">{formattedDate}</span>
+        <div className="bg-black text-white text-center py-2 px-4 text-sm md:text-base font-medium">
+            Desconto de Black Friday, só <span className="font-bold" style={{ color: '#FDD835' }}>HOJE</span> - <span className="font-bold" style={{ color: '#FDD835' }}>{formattedDate}</span>
         </div>
     );
 }
