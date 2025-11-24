@@ -1,15 +1,8 @@
 import { useCheckoutLink } from '../../hooks/useCheckoutLink';
-import { trackClickNonBlocking } from '../../services/trackingBeacon';
+import { handleCheckoutNavigation } from '../../utils/navigation';
 
 export default function FinalCTA() {
   const checkoutUrl = useCheckoutLink();
-
-  const handlePurchase = () => {
-    trackClickNonBlocking(
-      checkoutUrl,
-      'final-cta-section'
-    );
-  };
 
   return (
     <section className="py-16 px-5 bg-gradient-to-br from-azul-gradient-start to-azul-gradient-end">
@@ -20,7 +13,7 @@ export default function FinalCTA() {
 
         <a
           href={checkoutUrl}
-          onClick={handlePurchase}
+          onClick={(e) => handleCheckoutNavigation(e, checkoutUrl, 'final-cta-section')}
           className="checkout inline-block w-full max-w-md bg-verde-cta hover:bg-verde-hover text-white px-12 py-6 rounded-lg text-xl font-bold shadow-2xl transition-all duration-300 hover:scale-105"
         >
           QUERO GARANTIR AGORA!

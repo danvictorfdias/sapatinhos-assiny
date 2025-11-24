@@ -1,13 +1,8 @@
-import { trackAndRedirect } from '../../services/clickTracking';
+import { useCheckoutLink } from '../../hooks/useCheckoutLink';
+import { handleCheckoutNavigation } from '../../utils/navigation';
 
 export default function FAQCTA() {
-  const handlePurchase = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    trackAndRedirect(
-      'https://heloisa-artesa.pay.yampi.com.br/r/83GMPVBIBX',
-      'faq-cta'
-    );
-  };
+  const checkoutUrl = useCheckoutLink();
 
   return (
     <section className="py-16 bg-[#1e3a5f]">
@@ -22,8 +17,8 @@ export default function FAQCTA() {
           </p>
 
           <a
-            href="https://heloisa-artesa.pay.yampi.com.br/r/83GMPVBIBX"
-            onClick={handlePurchase}
+            href={checkoutUrl}
+            onClick={(e) => handleCheckoutNavigation(e, checkoutUrl, 'faq-cta')}
             className="checkout bg-[#28a745] hover:bg-[#218838] text-white px-12 py-5 rounded-lg text-xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
           >
             💳 Comprar Agora

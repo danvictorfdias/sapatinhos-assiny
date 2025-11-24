@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, memo } from 'react';
 import { Check } from 'lucide-react';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import { useCheckoutLink } from '../../hooks/useCheckoutLink';
-import { trackClickNonBlocking } from '../../services/trackingBeacon';
+import { handleCheckoutNavigation } from '../../utils/navigation';
 
 function Offer() {
   const offerRef = useRef<HTMLDivElement>(null);
@@ -36,12 +36,7 @@ function Offer() {
     }
   }, [isVisible, hasAnimated]);
 
-  const handlePurchase = () => {
-    trackClickNonBlocking(
-      checkoutUrl,
-      'offer-section'
-    );
-  };
+
 
   return (
     <section id="preco" ref={offerRef} className="py-20 px-5 bg-white">
@@ -108,7 +103,7 @@ function Offer() {
 
           <a
             href={checkoutUrl}
-            onClick={handlePurchase}
+            onClick={(e) => handleCheckoutNavigation(e, checkoutUrl, 'offer-section')}
             className="checkout inline-block w-full bg-verde-cta hover:bg-verde-hover text-white px-12 py-5 rounded-full text-lg font-bold shadow-lg transition-all duration-300 mb-6"
           >
             QUERO MEUS SAPATINHOS AMIGURUMI AGORA!
