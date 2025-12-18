@@ -48,6 +48,8 @@ function Hero() {
               alt="Apostila Pantufas e Sapatinhos Amigurumi"
               className="max-w-[450px] w-full h-auto rounded-lg animate-float"
               style={{ filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.3))' }}
+              fetchPriority="high"
+              loading="eager"
             />
           </div>
         </div>
