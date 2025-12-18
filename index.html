@@ -1,38 +1,34 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Utmify Pixel - PRIORIDADE MÁXIMA -->
-    <script>
-      window.pixelId = "68ceca0c6b48e432db01234e";
-      var a = document.createElement("script");
-      a.setAttribute("async", "");
-      a.setAttribute("defer", "");
-      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-      document.head.appendChild(a);
-    </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FRB6CM4LW"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-5FRB6CM4LW');
-    </script>
+<head>
+  <!-- Utmify Pixel - PRIORIDADE MÁXIMA -->
+  <script>
+    window.pixelId = "68ceca0c6b48e432db01234e";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
 
-    <!-- Utmify UTMs Script -->
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FRB6CM4LW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-5FRB6CM4LW');
+  </script>
 
-    <!-- Back Redirect Script -->
-    <script type="text/javascript">
-    (function() {
-      var back_redirect_back_link = 'https://brsapatinhos.tecnicassecretas.site/';
+  <!-- Utmify UTMs Script -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids
+    async defer></script>
+
+  <!-- Back Redirect Script -->
+  <script type="text/javascript">
+    (function () {
+      var back_redirect_back_link = 'https://brsapatinhos.amigurumitop.com/';
       var blockRedirect = false;
       var isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
@@ -41,7 +37,7 @@
       }
 
       window.onbeforeunload = null;
-      window.removeEventListener('beforeunload', function() {});
+      window.removeEventListener('beforeunload', function () { });
 
       history.pushState({}, "", location.href);
       history.pushState({}, "", location.href);
@@ -53,13 +49,13 @@
 
       var xDown = null, yDown = null;
 
-      document.addEventListener('touchstart', function(evt) {
+      document.addEventListener('touchstart', function (evt) {
         if (blockRedirect) return;
         xDown = evt.touches[0].clientX;
         yDown = evt.touches[0].clientY;
-      }, {passive: false});
+      }, { passive: false });
 
-      document.addEventListener('touchmove', function(evt) {
+      document.addEventListener('touchmove', function (evt) {
         if (!xDown || !yDown || blockRedirect) return;
         var xUp = evt.touches[0].clientX;
         var xDiff = xDown - xUp;
@@ -73,18 +69,18 @@
           yDown = null;
           return false;
         }
-      }, {passive: false});
+      }, { passive: false });
 
-      document.addEventListener('touchend', function() {
+      document.addEventListener('touchend', function () {
         xDown = null;
         yDown = null;
-      }, {passive: true});
+      }, { passive: true });
 
-      window.onpopstate = function() {
+      window.onpopstate = function () {
         if (blockRedirect) return;
         var queryString = getQueryString();
         var finalUrl = back_redirect_back_link + queryString;
-        setTimeout(function() {
+        setTimeout(function () {
           location.href = finalUrl;
         }, 0);
       };
@@ -109,33 +105,35 @@
 
           var className = currentEl.className || '';
           if (className.includes('btn') ||
-              className.includes('button') ||
-              className.includes('cta') ||
-              className.includes('no-redirect')) return true;
+            className.includes('button') ||
+            className.includes('cta') ||
+            className.includes('no-redirect')) return true;
 
           currentEl = currentEl.parentNode;
         }
         return false;
       }
 
-      document.addEventListener('click', function(e) {
+      document.addEventListener('click', function (e) {
         if (shouldExcludeElement(e.target)) {
           blockRedirect = true;
-          setTimeout(function() {
+          setTimeout(function () {
             blockRedirect = false;
           }, 3000);
         }
       }, true);
     })();
-    </script>
+  </script>
 
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apostila Amigurumi Pantufas & Sapatinhos - +100 Modelos Exclusivos</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apostila Amigurumi Pantufas & Sapatinhos - +100 Modelos Exclusivos</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
